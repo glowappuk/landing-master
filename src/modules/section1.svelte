@@ -5,12 +5,47 @@
 <section>
     <div class="sec-one">
         <div class="container ">
-            <div class="sec1-up text-pos-abs">
-                <h1>Mobile beauty 
-                     and wellness platform
-                </h1>
+            <div class="sec1-up">
+                <h1>List your treatment room</h1>
                 <p>Join the leading platform <b>FOR FREE</b></p>
                 <a href="https://businessglowapp.co.uk/auth-room"><button>SIGN UP</button></a>
+            </div>
+            <div class="sec-choose">
+                <h4>Why Choose Us</h4>
+                <div class="choose-container">
+                    <div class="choose-row">
+                        <div class="choose-box">
+                            <img src="./assets/check-mark.png" alt="check-mark"/>
+                            <div>
+                                <h6>Easy online booking</h6>
+                                <p>User friendly booking system</p>
+                            </div>
+                        </div>
+                        <div class="choose-box">
+                            <img src="./assets/check-mark.png" alt="check-mark"/>
+                            <div>
+                                <h6>Affordable & Flexible</h6>
+                                <p>Book just what you need</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="choose-row">
+                        <div class="choose-box">
+                            <img src="./assets/check-mark.png" alt="check-mark"/>
+                            <div>
+                                <h6>No commitment</h6>
+                                <p>No lengthy contracts</p>
+                            </div>
+                        </div>
+                        <div class="choose-box">
+                            <img src="./assets/check-mark.png" alt="check-mark"/>
+                            <div>
+                                <h6>No hidden fees</h6>
+                                <p>All bills included</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>          
         {#if toggle}
@@ -32,10 +67,11 @@
         <div class="sec1-circles">
             <div class="circle-text">
                 <div class="sec1-circle">
-                    <img src="./assets/circle1.svg" alt="circle1">
+                    <!-- <img src="./assets/circle1.svg" alt="circle1"> -->
+                    <img src="./assets/pick-a-treatment.svg" alt="circle1">
                 </div>
-                <p class="color-black">List your 
-                    {toggle ? 'treatment room' : 'services'}
+                <p class="color-black"> 
+                    {toggle ? 'Pick a treatment' : 'services'}
                 </p>
             </div>
             <div class={toggle ? 'd-n' : 'circle-text'}>
@@ -47,10 +83,10 @@
             </div>
             <div class="circle-text">
                 <div class="sec1-circle">
-                    <img src={toggle ? "./assets/room-circle2.svg" : "./assets/circle3.svg"} alt="circle3">
+                    <img src={toggle ? "./assets/choose-a-beauty.svg" : "./assets/circle3.svg"} alt="circle3">
                 </div>
-                <p class="color-black">Upload 
-                    your portfolio
+                <p class="color-black"> 
+                    Choose a beauty or wellness professional
                 </p>
             </div>
             <div class={toggle ? 'd-n' : 'circle-text'}>
@@ -63,18 +99,17 @@
             </div>
             <div class="circle-text">
                 <div class="sec1-circle">
-                    <img src={toggle ? "./assets/room-circle3.svg" : "./assets/circle5.svg"} alt="circle5">
+                    <img src={toggle ? "./assets/set-location.svg" : "./assets/circle5.svg"} alt="circle5">
                 </div>
-                <p class="color-black">Set your 
-                    working area
+                <p class="color-black">Set location and time
                 </p>
             </div>
             <div class="circle-text">
                 <div class="sec1-circle">
-                    <img src="./assets/circle6.svg" alt="circle6">
+                    <img src="./assets/sit-back.svg" alt="circle6">
                 </div>
                 <p class="color-black">
-                    Get bookings and grow your business
+                    Sit back and relax
                 </p>
             </div>
 
@@ -89,16 +124,23 @@
 
     .sec-one{
         background: linear-gradient(102.93deg, rgba(33, 24, 24, 0.5) 17.79%, rgba(33, 24, 24, 0.340632) 44%, rgba(33, 24, 24, 0.198133) 62.12%, rgba(33, 24, 24, 0.135846) 77.66%, rgba(33, 24, 24, 0) 100%);
+        position: relative;
+        height: 600px;
     }
-
+    .container {
+        height: 100%;
+    }
     .text-pos-abs{
         position: absolute;
         top: 30%;
     }
     .sec-one-img{
-        position: relative;
+        position: absolute;
         z-index: -1;
-        width: 100%;    
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
         object-fit: cover;
     }
     
@@ -125,7 +167,69 @@
         border: none;
     }
     .sec1-up{
-        width: 550px;   
+        width: 550px;
+        padding-top: 15%;
+    }
+    .sec1-up h1{
+        margin-bottom: 20px;
+    }
+
+    .sec-choose {
+        padding: 20px 8px 8px 8px;
+        background-color: white;
+        position: absolute;
+        width: 500px;
+        top: 120px;
+        right: min(50px, 3vw);
+    }
+
+    .sec-choose h4 {
+        color: #636363;
+        font-size: 30px;
+        font-weight: 900;
+        margin-bottom: 20px;
+        padding-left: 8px;
+    }
+    .choose-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .choose-row {
+        display: flex;
+        flex-direction: row;
+
+    }
+    .choose-box {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 8px;
+        padding: 14px 12px;
+        width: 50%;
+        background-color: #ebebeb;
+        border-radius: 4px;
+    }
+    .choose-box div {
+        flex: 1;
+    }
+    .choose-box h6 {
+        color: var(--black);
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 1.4;
+        margin-bottom: 4px;
+    }
+    .choose-box p {
+        font-size: 20px;
+        padding: 0px;
+        margin: 0;
+        color: var(--black);
+        line-height: 1.6;
+    }
+    .choose-box img {
+        width: 20px;
+        height: 20px;
+        margin-right: 14px;
     }
     .sec1-down{
         padding: 60px 0;
@@ -167,6 +271,9 @@
         justify-content: center;
         align-items: center;
     }
+    .sec1-circle img { 
+        width: 100%;
+    }
     .sec1-circles .circle-text:nth-child(1) > div{
         background-color: var(--violet-100);
     } 
@@ -192,14 +299,10 @@
     }
 
     /* MOBILE_ADAPTIVE */
-
-    @media (max-width: 1440px) {
-        .sec-one-img{
-          height: 600px;  
-        } 
-    }
-
-    @media (max-width: 1024px) {
+    @media (max-width: 1100px) {
+        .sec1-up {
+            width: 330px;
+        }
         .sec-one-img{
             background-position: left;
         } 
@@ -208,31 +311,63 @@
             font-size: 23px;
         }
     }
-
+    @media (max-width: 900px){
+        .sec-one {
+            height: auto;
+            padding-bottom: 30px;
+        }
+        .sec1-up {
+            width: 550px;
+            padding-top: 100px;
+        }
+        .sec-choose { 
+            position: relative;
+            width: 100%;
+            max-width: 650px;
+            top: 0;
+            right: 0;
+            margin: 40px auto 0px auto;
+        }
+        .text-pos-abs{
+            top: 10%;
+        }
+    }
     @media (max-width: 740px) {
+        .sec-choose h4{
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+        .choose-box {
+            margin: 4px;
+        }
+        .choose-box h6 {
+            font-size: 16px;
+        }
+        .choose-box p {
+            font-size: 16px;
+            font-size: 16px;
+        }
         h1{
-            font-size: 20px;
+            font-size: 28px;
         }
         p{
-            font-size: 14px;
+            font-size: 22px;
         }
         b{
-            font-size: 14px;
+            font-size: 22px;
         }
-        .sec-one-img{
-            height: 393px;
-        } 
         .text-pos-abs{
-            top: 20%;
+            top: 10%;
         }
         .sec1-up{
-        width: auto;   
+            width: auto;   
         }
 
         .sec1-down-header{
             margin: 0px 20px;
             font-size: 20px;
         }
+
     }
     @media (max-width: 600px) {
         .sec1-down-header{
@@ -241,16 +376,11 @@
     }
     @media (max-width: 550px) {
         .sec-one-img{
-          height: 558px; 
           object-position: left;
         } 
-        .text-pos-abs{      
-            top: 25%;
-        }
         h1  {
             white-space: pre-line;
         }
-
         .color-black{
             font-size: 14px;
         }
