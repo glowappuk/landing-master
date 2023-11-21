@@ -58,7 +58,7 @@
 
     <div class="container sec1-down">
         {#if toggle}
-            <h2>How it works</h2>
+            <h2>List your treatment room, therapy room or hairdresser’s chair</h2>
         {:else}
             <h2 class="sec1-down-header">Get <span>organized</span> and <span>grow</span>
             your mobile beauty business</h2>
@@ -67,11 +67,10 @@
         <div class="sec1-circles">
             <div class="circle-text">
                 <div class="sec1-circle">
-                    <!-- <img src="./assets/circle1.svg" alt="circle1"> -->
-                    <img src="./assets/pick-a-treatment.svg" alt="circle1">
+                    <img src="./assets/circle1.svg" alt="circle1">
                 </div>
                 <p class="color-black"> 
-                    {toggle ? 'Pick a treatment' : 'services'}
+                    {toggle ? 'List your treatment room' : 'services'}
                 </p>
             </div>
             <div class={toggle ? 'd-n' : 'circle-text'}>
@@ -83,10 +82,10 @@
             </div>
             <div class="circle-text">
                 <div class="sec1-circle">
-                    <img src={toggle ? "./assets/choose-a-beauty.svg" : "./assets/circle3.svg"} alt="circle3">
+                    <img src={toggle ? "./assets/room-circle2.svg" : "./assets/circle3.svg"} alt="circle3">
                 </div>
                 <p class="color-black"> 
-                    Choose a beauty or wellness professional
+                    Set your working hours and prices
                 </p>
             </div>
             <div class={toggle ? 'd-n' : 'circle-text'}>
@@ -99,17 +98,17 @@
             </div>
             <div class="circle-text">
                 <div class="sec1-circle">
-                    <img src={toggle ? "./assets/set-location.svg" : "./assets/circle5.svg"} alt="circle5">
+                    <img src={toggle ? "./assets/room-circle3.svg" : "./assets/circle5.svg"} alt="circle5">
                 </div>
-                <p class="color-black">Set location and time
+                <p class="color-black">Upload pictures
                 </p>
             </div>
             <div class="circle-text">
                 <div class="sec1-circle">
-                    <img src="./assets/sit-back.svg" alt="circle6">
+                    <img src="./assets/circle6.svg" alt="circle6">
                 </div>
                 <p class="color-black">
-                    Sit back and relax
+                    Get bookings and grow your business
                 </p>
             </div>
 
@@ -245,7 +244,7 @@
         font-weight: inherit;
     }
     .sec1-circles{
-        margin: 30px 0px;
+        margin: 50px 0px 30px 0px;
         display: flex;
         justify-content: space-evenly;
         flex-wrap: wrap;
@@ -263,16 +262,16 @@
         font-weight: 600;
     }
     .sec1-circle{
-        width: 80px;
-        height: 80px;
+        width: 110px;
+        height: 110px;
         background-color: aqua;
-        border-radius: 40px;
+        border-radius: 50%;
         display: flex;
         justify-content: center;
         align-items: center;
     }
     .sec1-circle img { 
-        width: 100%;
+        width: 65%;
     }
     .sec1-circles .circle-text:nth-child(1) > div{
         background-color: var(--violet-100);
